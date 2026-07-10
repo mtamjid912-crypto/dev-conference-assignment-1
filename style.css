@@ -180,3 +180,173 @@ nav{
     background-color: #0D1B2A;
     color: white;
 }
+
+
+
+/* ai generated section */
+
+:root {
+  --color-primary: #2563eb;      /* professional blue */
+  --color-primary-dark: #1d4ed8; /* darker blue for hover states */
+  --color-text-dark: #111827;    /* headings */
+  --color-text-light: #4b5563;   /* paragraphs */
+  --color-card-bg: #ffffff;      /* card background */
+  --color-border: #e5e7eb;       /* light border/divider color */
+  --radius-large: 16px;          /* rounded corners for section/cards */
+  --radius-small: 8px;
+}
+ 
+ 
+/* ==========================================================
+   3. CONFERENCE SECTION WRAPPER
+   ========================================================== */
+ 
+.conference {
+  max-width: 1100px;
+  margin: 0 auto;              /* center the section on the page */
+  background-color: #ffffff;
+  border-radius: var(--radius-large);
+  padding: 48px 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+ 
+ 
+/* ==========================================================
+   4. HEADER: Title, Subtitle, Description
+   ========================================================== */
+ 
+.conference__header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+}
+ 
+.conference__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 8px;
+}
+ 
+.conference__subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+ 
+.conference__description {
+  font-size: 1rem;
+  color: var(--color-text-light);
+}
+ 
+ 
+/* ==========================================================
+   5. CARD GRID
+   CSS Grid automatically arranges cards into columns
+   and wraps them onto new rows on smaller screens.
+   ========================================================== */
+ 
+.card-grid {
+  list-style: none; /* remove bullet points from the <ul> */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns on desktop */
+  gap: 24px;
+  margin-bottom: 40px;
+}
+ 
+ 
+/* ==========================================================
+   6. INDIVIDUAL CARD STYLES
+   ========================================================== */
+ 
+.card {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  padding: 28px 20px;
+  text-align: center;
+ 
+  /* Smooth transition for the hover effect below */
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+ 
+/* Hover effect: card lifts up slightly and gets a soft shadow */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.15);
+  border-color: var(--color-primary);
+}
+ 
+.card__icon {
+  display: inline-block;
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+ 
+.card__title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin-bottom: 8px;
+}
+ 
+.card__value {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+}
+ 
+ 
+/* ==========================================================
+   7. CALL-TO-ACTION BUTTON
+   ========================================================== */
+ 
+.conference__cta {
+  text-align: center;
+}
+ 
+.btn-register {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px 40px;
+  border-radius: 999px; /* fully rounded "pill" button */
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+ 
+.btn-register:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+ 
+ 
+/* ==========================================================
+   8. RESPONSIVE DESIGN
+   Adjust the grid layout for tablets and mobile phones.
+   ========================================================== */
+ 
+/* Tablets: 2 columns instead of 3 */
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+ 
+/* Mobile phones: 1 column, smaller title text */
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  .conference__title {
+    font-size: 2rem;
+  }
+ 
+  .conference {
+    padding: 32px 20px;
+  }
+}
+ 
