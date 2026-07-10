@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    padding:10px;
+
+}
+.menu ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    list-style: none;
+    cursor: pointer;
+}
+
+
+
+
+.btn{
+    border-radius: 8px;
+    padding: 10px;
+    border: none;
+    background-color: #1D4ED8;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+/* banner section */
+.banner{
+    background-image:linear-gradient(to right,
+        rgba(0,0,0,0.9),
+        rgba(0,0,0,0.1)),
+         url(./asset/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    text-align: center;
+    padding: 100px;
+    color: white;
+}
+.banner h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.banner p{
+    font-size: 20px;
+    margin-bottom: 300px;
+}
+/* speaker section */
+.speakers{
+    padding: 110px;
+}
+
+.speaker-team{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+.speakers h2{
+    font-size: 55px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.speaker-card{
+    width: 40vw;
+    margin: 20px;
+    border: rgb(207, 207, 207) 1px solid;
+    box-shadow: 0px 0px 10px 0px rgb(207, 207, 207);
+    text-align: left;
+}
+.speaker-card img{
+    width: 100%;
+    height: auto;
+}
+.speaker-card .speaker-info{
+    padding: 20px;
+}
+.speaker-info h6{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #1D4ED8;
+}
+.speaker-info h4{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.speaker-info p{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: rgb(107, 107, 107);
+}
+/* price-section */
+.price{
+    padding: 110px;
+}
+.price h2{
+    font-size: 55px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.price p{
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.price-offers{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.price-card{
+    width: 30vw;
+    height: 50vh;
+    margin: 2vw;
+    gap: 5px;
+    background: #fcfafa;
+    border: rgb(248, 244, 244) 1px solid;
+    box-shadow: 0px 0px 10px 0px rgb(238, 238, 238);
+    text-align: left;
+    padding: 20px;
+}
+.price-card h6{
+    font-size: 20px;
+    font-weight: 600;
+    /* margin: 10px; */
+    color: #888888;
+}
+.price-card h1{
+    font-size: 48px;
+    font-weight: 700;
+}
+.price-card p{
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    color: #888888;
+    /* margin-bottom: 20px; */
+}
+.price-card .ul{
+
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+.price-card .ul li{
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.price-card .ul li::marker {
+  color: blue;
+}
+.btn-outline{
+    border: 1px solid #1D4ED8;
+    color: #1D4ED8;
+    background-color: white;
+}
