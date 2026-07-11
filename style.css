@@ -9,6 +9,7 @@ nav{
     text-align: center;
     align-items: center;
     padding:10px;
+    margin: 20px;
 
 }
 .menu ul{
@@ -349,4 +350,49 @@ nav{
     padding: 32px 20px;
   }
 }
- 
+ /* footer section */
+
+ .footer{
+    background:#0f172a;
+    color:white;
+    padding:40px 5vw;
+}
+
+.footer-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.social-links{
+    display:flex;
+    gap:20px;
+}
+.social-links .links{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap:10px;
+}
+
+.social-links a{
+    text-decoration:none;
+    color:#ffffff;
+    
+}
+
+
+hr{
+    margin:25px 0;
+    border:none;
+    height:1px;
+    background:#334155;
+}
+
+.footer-bottom{
+    text-align:center;
+    color:#94a3b8;
+}
