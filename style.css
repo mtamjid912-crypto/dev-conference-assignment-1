@@ -91,6 +91,7 @@ nav .logo :hover{
     margin: 20px;
     border: rgb(207, 207, 207) 1px solid;
     border-radius: 10px;
+    overflow: hidden;
     box-shadow: 0px 0px 10px 0px rgb(207, 207, 207);
     text-align: left;
     transition: transform 0.3s ease;
@@ -336,7 +337,7 @@ nav .logo :hover{
   font-weight: 600;
   font-size: 1rem;
   padding: 14px 40px;
-  border-radius: 999px; /* fully rounded "pill" button */
+  border-radius: 9px; /* fully rounded "pill" button */
   transition: background-color 0.25s ease, transform 0.25s ease;
 }
  
@@ -415,16 +416,55 @@ hr{
    ========================================================== */
  
 /* Tablets: 2 columns instead of 3 */
-@media (max-width: 900px) {
+/* Extra small devices (phones) */
+@media screen and (max-width: 576px) {
+    .menu{
+        display:none;
+    }
+    .banner{
+        padding: 30px 20px;
 
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
- 
-/* Mobile phones: 1 column, smaller title text */
-@media (max-width: 600px) {
-  .card-grid {
+    }
+    .banner h1{
+        font-size: 35px;
+    }
+    .banner p{
+        font-size: 12px;
+        margin-bottom: 40px;
+    }
+    .speakers{
+        justify-items: center;
+    }
+    .speaker-team {
+        /* justify-items: center; */
+        grid-template-columns: repeat(1,1fr);
+    }
+    .speaker-card{
+        width: 65vw;
+        text-align: center;
+    }
+    .price{
+        padding: 50px 10px;
+    }
+    .price-offers{
+        flex-direction: column;
+        align-items: center;
+    }
+    .price-card{
+        width: 70vw;
+        height: 50vh;
+    }
+    .btn-width{
+        width: 150px;
+    }
+    .price-card .ul li{
+        margin: 20px 0px;
+
+    }
+
+
+
+    .card-grid {
     grid-template-columns: 1fr;
   }
  
@@ -435,5 +475,129 @@ hr{
   .conference {
     padding: 32px 20px;
   }
+  .footer-top{
+    flex-direction: column;
+    text-align: center;
+  }
 }
+
+/* Small devices (large phones, tablets) */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .banner p{
+        font-size: 18px;
+        margin-bottom: 80px;
+    }
+    .speaker-team {
+        align-items: center;
+        grid-template-columns: repeat(1,1fr); 
+           
+    }
+    .speakers{
+        justify-items: center;
+    }
+    .speaker-card{
+        width: 55vw;
+    }
+    .price-offers{
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+    .price-card{
+        width: 60vw;
+        height: 45vh;
+    }
+    
+
+    .btn-width{
+        width: 200px;
+    }
+    .price-card .ul li{
+        margin: 15px 0px;
+    }
+
+
+
+
+    .card-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  .conference__title {
+    font-size: 2rem;
+  }
+ 
+  .conference {
+    padding: 32px 20px;
+  }
+  .footer-top{
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Medium devices (tablets, small laptops) */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .speakers{
+        justify-items: center;
+    }
+    .speaker-team {
+        align-items: center;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .speaker-card{
+        width: 60vw;
+    }
+    .price-offers{
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+    .btn-width{
+        width: 250px;
+    }
+    .price-card{
+        width: 55vw;
+        height: 50vh;
+    }
+    
+    
+    .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large devices (laptops) */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .speakers{
+        justify-items: center;
+    }
+    .price-offers{
+        flex-direction: column;
+        align-items: center;  
+        justify-items: center; 
+    }
+     .price-card{
+        width: 60vw;
+        height: 50vh;
+    }
+    .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Extra large devices (desktops) */
+@media screen and (min-width: 1201px) {
+    .banner p{
+        margin-bottom: 250px;
+    }
+    .speakers{
+        justify-items: center;
+    }
+    .price-offers{
+        justify-content: center;
+    }
+}
+
+
 
