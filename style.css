@@ -10,7 +10,10 @@ nav{
     align-items: center;
     padding:10px;
     margin: 20px;
-
+}
+nav .logo :hover{
+    transform: scale(1.2);
+    transition: 0.3s;
 }
 .menu ul{
     display: flex;
@@ -20,7 +23,11 @@ nav{
     cursor: pointer;
 }
 
-
+.menu ul :hover{
+    color: #0044ff;
+    transition: 0.3s;
+    transform: translateY(-5px);
+}
 
 
 .btn{
@@ -31,7 +38,11 @@ nav{
     color: white;
     font-weight: 700;
     cursor: pointer;
-    
+    transition: 0.3s;
+}
+.btn:hover{
+    background-color: #335fee;
+    transform: translateY(-5px);
 }
 /* banner section */
 .banner{
@@ -49,6 +60,10 @@ nav{
 .banner h1{
     font-size: 50px;
     margin-bottom: 20px;
+}
+.banner h1 span{
+    color: #1D4ED8;
+    font-style: italic;
 }
 .banner p{
     font-size: 20px;
@@ -77,6 +92,12 @@ nav{
     border: rgb(207, 207, 207) 1px solid;
     box-shadow: 0px 0px 10px 0px rgb(207, 207, 207);
     text-align: left;
+    transition: transform 0.3s ease;
+}
+.speaker-card:hover{
+    box-shadow: 0px 0px 10px 0px rgb(29, 78, 216);
+    /* transition: 0.3s; */
+    transform: translateY(-5px);
 }
 .speaker-card img{
     width: 100%;
@@ -324,6 +345,69 @@ nav{
 }
  
  
+ /* footer section */
+
+ .footer{
+    background:#0f172a;
+    color:white;
+    padding:40px 5vw;
+    margin-top: 50px;
+}
+
+.footer-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+.footer-top img:hover{
+    transform: scale(1.2);
+    transition: 0.3s;
+  
+}
+.social-links{
+    display:flex;
+    gap:20px;
+}
+.social-links .links{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap:10px;
+}
+
+.social-links a{
+    text-decoration:none;
+    color:#ffffff;
+    
+}
+.social-links a:hover{
+    color:#1d4ed8;
+    transition:0.3s;
+}
+.links img{
+  cursor: pointer;
+}
+.links img:hover{
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+hr{
+    margin:25px 0;
+    border:none;
+    height:1px;
+    background:#334155;
+}
+
+.footer-bottom{
+    text-align:center;
+    color:#94a3b8;
+}
+
+
+
 /* ==========================================================
    8. RESPONSIVE DESIGN
    Adjust the grid layout for tablets and mobile phones.
@@ -331,6 +415,7 @@ nav{
  
 /* Tablets: 2 columns instead of 3 */
 @media (max-width: 900px) {
+
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -350,49 +435,4 @@ nav{
     padding: 32px 20px;
   }
 }
- /* footer section */
 
- .footer{
-    background:#0f172a;
-    color:white;
-    padding:40px 5vw;
-}
-
-.footer-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:20px;
-}
-
-.social-links{
-    display:flex;
-    gap:20px;
-}
-.social-links .links{
-    display:flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    gap:10px;
-}
-
-.social-links a{
-    text-decoration:none;
-    color:#ffffff;
-    
-}
-
-
-hr{
-    margin:25px 0;
-    border:none;
-    height:1px;
-    background:#334155;
-}
-
-.footer-bottom{
-    text-align:center;
-    color:#94a3b8;
-}
